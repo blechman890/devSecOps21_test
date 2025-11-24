@@ -1,0 +1,9 @@
+======== USER BADGE =========
+Thank you! Here is the information you provided:
+Name: aaaa
+Age: aaa
+ID number: aaaa
+Registered: 2025-11-20 22:14:02
+Hostname: ilya-VMware20-1
+Terminal: ilya
+============================

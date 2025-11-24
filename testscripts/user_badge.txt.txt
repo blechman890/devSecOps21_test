@@ -1,0 +1,7 @@
+======== USER BADGE =========
+Thank you! Here is the information you provided:
+Name: Eliyahu Blechman
+Age: 42
+ID number: 12345
+Registered: 
+Terminal: 
