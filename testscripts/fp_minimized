@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Configuration
+SYSLOG_PATTERN="/var/log/syslog*"
+CONFIG_FILE="error_keywords.conf"
+
+# Validate config file and load patterns
+[[ -f "$CONFIG_FILE" ]] || { echo "Error: Config file not found."; exit 1; }
+mapfile -t ERROR_PATTERNS < <(grep -v '^#\|^$' "$CONFIG_FILE")
+[[ ${#ERROR_PATTERNS[@]} -eq 0 ]] && { echo "Error: No valid patterns."; exit 1; }
+
+# Check syslog files exist and are readable
+ls $SYSLOG_PATTERN &>/dev/null || { echo "Syslog files not found."; exit 1; }
+for log in $SYSLOG_PATTERN; do
+    [[ -r "$log" ]] || { echo "No read permission on $log"; exit 1; }
+done
+
+# Generate report
+report="syslog_report_$(date +%Y%m%d_%H%M%S).txt"
+{
+    echo "=========================================="
+    echo "LOG ANALYSIS REPORT - $(date +%Y%m%d_%H%M%S)"
+    echo "Initiated by: $(whoami)"
+    echo "=========================================="
+    
+    logcount=0
+    for log in $SYSLOG_PATTERN; do
+        [[ -f "$log" && -r "$log" ]] || continue
+        ((logcount++))
+        echo -e "\n========== $log =========="
+        
+        for pattern in "${ERROR_PATTERNS[@]}"; do
+            ips=$(grep -Ei "$pattern" "$log" | grep -Eo "([0-9]{1,3}\.){3}[0-9]{1,3}" | sort | uniq -c | sort -nr)
+            if [[ -n "$ips" ]]; then
+                echo "$ips" | while read count ip; do
+                    echo " • '$pattern' → $count × $ip"
+                done
+            else
+                echo " • '$pattern' → 0 matches"
+            fi
+        done
+    done
+    
+    echo -e "\n=========================================="
+    echo "SUMMARY: $logcount files, ${#ERROR_PATTERNS[@]} patterns"
+    echo "=========================================="
+} > "$report"
+
+echo "Report saved to: $report"
