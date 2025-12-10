@@ -1,0 +1,13 @@
+print("\nWorking with modules")
+#built in modules
+import math
+import random
+import datetime
+print(f"Math.pi: {math.pi}")
+print(f"Math.sqrt(16): {math.sqrt(16)}")
+print(f"Random number: {random.randint(1, 100)}")
+print(f"Current date and time: {datetime.datetime.now()}")
+
+# Importing specific functions
+from math import sqrt, pow
+print(f"Using imported sqrt: {sqrt(25)}")

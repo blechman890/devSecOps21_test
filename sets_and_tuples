@@ -1,0 +1,22 @@
+print("\nSets and Tuples")
+# Sets - unorderd, unique elements
+server_set1 = {"web-1", "db-1", "prod1", "cache-1"}
+server_set2 = {"web-2", "db-1", "prod2", "cache-2"}
+
+print(f"Set 1: {server_set1}")
+print(f"Set 2: {server_set2}")
+print(f"Union: {server_set1 | server_set2}")
+print(f"Intersection: {server_set1 & server_set2}")
+print(f"Difference: {server_set1 - server_set2}")
+
+
+# Tuples - immutable (cant be changed)
+coordinates = (10, 20)
+server_config = ("web-1", "192.192.192.192", 8080)
+
+print(f"\nTuple: {server_config}")
+print(f"First element: {server_config[0]}")
+
+# Tuple unpacking
+hostname, ip, port = server_config
+print(f"Unpacked: name = {hostname}, ip={ip}, port={port}")
