@@ -1,0 +1,17 @@
+print("\nException Handling\n")
+
+# Basic try-except
+print("Example 1: Division")
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Error: Division by zero is not allowed.")
+
+# Handling multiple exceptions
+print("\nExample 2: Multiple Exceptions")
+try:
+    num = int("abc")
+except ValueError:
+    print("Error: Invalid number format.")
+except Exception as e:
+    print(f"Other error occured: {e}")

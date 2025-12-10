@@ -1,0 +1,13 @@
+lst = [15, 3, 9, -5, 99, -123, 0]
+new_lst = []
+while len(lst) > 0:
+    current_min = lst[0]
+    list_size = len(lst)
+    for index in range(0, list_size):
+        if lst[index] < current_min:
+            current_min = lst[index]
+    print("Smallest:", list[current_min], 'location:',
+          current_min)
+    new_lst.append( lst[current_min])
+    lst.remove(current_min)
+print("Sorted List:", new_lst)

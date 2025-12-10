@@ -1,0 +1,4 @@
+print("\nExercise 15: ")
+for num in list(range(1, 18)) + list(range(18, 0, -1)):
+    print('*'*num)
+    

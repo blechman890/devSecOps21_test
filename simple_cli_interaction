@@ -1,0 +1,8 @@
+while True:
+    user_input = input("Enter command to continue or 'exit' to quit: ")
+    if user_input == 'exit':
+        break
+    elif user_input.strip() == '':
+        print("No command entered, please try again.")
+    else:
+        print(f"{user_input} is a nice command!")

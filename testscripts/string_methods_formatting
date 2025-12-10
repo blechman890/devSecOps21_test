@@ -1,0 +1,24 @@
+print("\n--String Methods and Formatting Exercises--\n")
+text = "hello world"
+print(f"Original text: {text}")
+print(f"Uppercase: {text.upper()}")
+print(f"Title Case: {text.title()}")
+print(f"Replaced 'world' with 'there': {text.replace('world', 'there')}")
+print(f"Text centered in 30 spaces: '{text.center(30)}'")
+print(f"Text right-justified in 30 spaces: '{text.rjust(30)}'")
+print(f"Split text into words: {text.split()}")
+
+
+# String formatting methods
+name = "Alice"
+age = 30
+height = 5.7
+city = "New York"
+# f-string formatting
+print(f"\nf-string: {name} is {age} years old, {height} feet tall, and lives in {city}.")
+
+# format() method
+print("format() method: {} is {} years old, {} feet tall, and lives in {}.".format(name, age, height, city))
+
+# % operator formatting
+print("% operator: %s is %d years old, %.1f feet tall, and lives in %s." % (name, age, height, city))

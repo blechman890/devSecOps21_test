@@ -1,0 +1,7 @@
+print("\n---Exercise 12: Create dictionary ---")
+keys = ['name', 'age', 'city']
+values = ['Ilya', 42, 'Yahud']
+result = {}
+for word in range(len(keys)):
+    result[keys[word]] = values[word]
+print(result)  # {'name': 'Ilya', 'age': 42, '

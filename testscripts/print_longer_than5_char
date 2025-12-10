@@ -1,0 +1,5 @@
+print("\nExercise 11: ")
+words = ['apple', 'bat', 'car', 'dolphin', 'elephant', 'fig', 'grape']
+for word in words:
+    if len(word) > 5:
+        print(word)

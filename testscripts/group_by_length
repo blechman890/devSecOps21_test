@@ -1,0 +1,9 @@
+print('\nExercise 18: ')
+words = ['cat', 'elephant', 'dog', 'hippopotamus', 'fox', 'giraffe']
+grouped = {}
+for word in words:
+    length = len(word)
+    if length not in grouped:
+        grouped[length] = []
+    grouped[length].append(word)
+print(grouped)  # Output: {3: ['cat', 'dog', 'fox
