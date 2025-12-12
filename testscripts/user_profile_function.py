@@ -1,3 +1,6 @@
+import profile
+
+
 def user_prof(username, age="9mill", location="Cybertron", is_active=True):
     profile = {
         "username": username,
