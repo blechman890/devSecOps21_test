@@ -1,0 +1,14 @@
+def calculate_age(birth_year):
+    current_year = 2025
+    age = current_year - birth_year
+    return age
+print("\nStep 1: Created a function called calculate_age")
+print("\nStep 2: Use the function")
+print(f"\nIf born in 2000: {calculate_age(2000)} years old")
+print(f"\nIf born in 1995: {calculate_age(1995)} years old")
+print("\nStep 3: Store it when using multiple times")
+my_age = calculate_age(1983)
+print(f"\nMy age: {my_age}")
+print(f"\nIn 5 years: {my_age +5}")
+print(f"\n10 years ago: {my_age -10}")
+print("\n")
