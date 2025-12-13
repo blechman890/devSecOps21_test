@@ -1,3 +1,9 @@
-def len_width(a=4, b=5):
-    return a * b
-print(len_width(a=10, b=5))
+def len_width(a, b):
+    print(f"The area of the rectangle is {a * b}")
+len_width(10, 10)
+len_width(5, 3)
+len_width(7, 4)
+len_width(b=100, a=50)
+len_width(8, b=12)
+len_width(a=6, b=9)
+len_width(b=20, a=20)

@@ -1,6 +1,3 @@
-import profile
-
-
 def user_prof(username, age="9mill", location="Cybertron", is_active=True):
     profile = {
         "username": username,
@@ -9,4 +6,5 @@ def user_prof(username, age="9mill", location="Cybertron", is_active=True):
         "is_active": is_active
     }
     return profile
-print(profile)
+result = user_prof("username", age="9mill", location="Cybertron", is_active=True)
+print(result)
