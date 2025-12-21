@@ -6,7 +6,7 @@ something = 5
 
 def sub_nums(a, b):
     return a - b
-print(sub_nums(a - b))
+print("sub_nums {a - b}")
 # Not so good func
 # def sub_somthing(num):  # Better if something was a parameter
 #    print(num - something)

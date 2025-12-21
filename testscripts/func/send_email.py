@@ -6,7 +6,7 @@ def send_email(recipient, subject, /, *, priority="normal", include_signature=Tr
 
 send_email("ilya@example.com", "Test Subject")
 send_email("moshe@example.com", "Drill", priority="high")
-send_email("recipient="jacob@example.com")
+send_email("recipient= jacob@example.com")
 
 
 # summary = f"""

@@ -9,9 +9,9 @@ def convert_key(enc_key):
     # Create a map from each letter in the encryption key back to the normal alphabet
     normal_alphabet = "abcdefghijklmnopqrstuvwxyz"
     dec_key = [''] * 26
-    for i, char in enumerate(enc_key):
-        index = normal_alphabet.index(char)
-        dec_key[index] = normal_alphabet[i]
+    for i, char in enumerate(enc_key):  
+        index = normal_alphabet.index(char) # Loops through each character in the enc_key along with its index. 
+        dec_key[index] = normal_alphabet[i] # Places the character from normal_alphabet at the index found above.
     return ''.join(dec_key)
 
 def translate(text, key):
